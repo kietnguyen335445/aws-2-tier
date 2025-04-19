@@ -93,6 +93,14 @@ Launch Template:
 
 ![Untitle4d](https://github.com/user-attachments/assets/7ec1766e-fa65-447a-8cf8-481096ccd9ae)
 
+Nat Gateways:
+
+Elastic Ip’s:
+
+AutoScaling Group:
+
+Internet Gateway:
+
 4. Destroy Infrastructure
 ```bash
 terraform destroy --var-file "terraform.tfvars"
