@@ -19,7 +19,6 @@ This project implements a modular, production-ready 2-Tier architecture on AWS u
   - NAT Gateway for private subnet internet access (e.g. RDS patching)
 - **Remote Backend**:
   - State stored in **S3**
-  - Locking handled by **DynamoDB**
 
 ---
 
