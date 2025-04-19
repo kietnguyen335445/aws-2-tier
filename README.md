@@ -87,10 +87,11 @@ terraform plan --var-file "terraform.tfvars"
 terraform apply --var-file "terraform.tfvars"
 ```
 When the components created successfully. Go to the Load Balancer page, copy the DNS name for the Terraform-2Tier-alb
+![load2](https://github.com/user-attachments/assets/837b33dc-e392-450c-a102-73302527aaa5)
 
-![load2](https://github.com/user-attachments/assets/7dd3ffb7-8f3a-43ee-84f0-d88a0bd4a990)
+![web3](https://github.com/user-attachments/assets/d2c4f741-316c-41b2-8b0d-809b0b86a5db)
 
-
+![web2](https://github.com/user-attachments/assets/e3b61d23-30c3-495f-91a3-bcba122ca1fd)
 
 4. Destroy Infrastructure
 ```bash
