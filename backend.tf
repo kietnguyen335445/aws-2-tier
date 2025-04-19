@@ -1,7 +1,7 @@
- resource "aws_s3_bucket" "backend_bucket" {
+resource "aws_s3_bucket" "backend_bucket" {
    bucket = "bucket-backend-k1"
  }
- resource "aws_s3_bucket_versioning" "version" {
+resource "aws_s3_bucket_versioning" "version" {
    bucket = aws_s3_bucket.backend_bucket.id
      versioning_configuration {
          status = "Enabled"
