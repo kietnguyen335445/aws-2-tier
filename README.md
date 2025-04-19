@@ -28,6 +28,47 @@ This project implements a modular, production-ready 2-Tier architecture on AWS u
 
 
 ---
+## Backend Configuration in Terraform:
+```bash
+resource "aws_s3_bucket" "backend_bucket" {
+   bucket = "bucket-backend-k1"
+ }
+resource "aws_s3_bucket_versioning" "version" {
+   bucket = aws_s3_bucket.backend_bucket.id
+     versioning_configuration {
+         status = "Enabled"
+     }
+ }
+resource "aws_s3_bucket_server_side_encryption_configuration" "encryp" {
+     bucket = aws_s3_bucket.backend_bucket.bucket
+     rule {
+         apply_server_side_encryption_by_default {
+             sse_algorithm = "AES256"
+         }
+     }
+ }
+```
+Add the Terraform backend block in the Terraform provider block in the provider.tf file.
+```bash
+terraform {
+    required_providers {
+        aws = {
+        source  = "hashicorp/aws"
+        version = "~> 5.0"
+        }
+    }
+backend "s3" {
+    bucket         = "bucket-backend-k1"
+    key            = "terraform.tfstate"
+    region         = "ap-southeast-1"
+    encrypt        = true
+    use_lockfile   = true
+  }
+}
+provider "aws" {
+  region= var.region
+}
+```
 
 ## 🔧 Terraform Setup
 
