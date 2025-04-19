@@ -86,9 +86,11 @@ terraform plan --var-file "terraform.tfvars"
 terraform apply --var-file "terraform.tfvars"
 ```
 Instances:
+
 ![Untitle3d](https://github.com/user-attachments/assets/1ae8f993-ec3d-485b-8e9c-545e84e97b68)
 
 Launch Template:
+
 ![Untitle4d](https://github.com/user-attachments/assets/7ec1766e-fa65-447a-8cf8-481096ccd9ae)
 
 4. Destroy Infrastructure
