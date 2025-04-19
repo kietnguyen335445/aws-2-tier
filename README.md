@@ -69,6 +69,7 @@ provider "aws" {
   region= var.region
 }
 ```
+![s3lock](https://github.com/user-attachments/assets/db03b403-0365-4bfa-bf30-be5a70ea5297)
 
 ## 🔧 Terraform Setup
 
@@ -85,6 +86,10 @@ terraform plan --var-file "terraform.tfvars"
 ```bash
 terraform apply --var-file "terraform.tfvars"
 ```
+When the components created successfully. Go to the Load Balancer page, copy the DNS name for the Terraform-2Tier-alb
+
+![load2](https://github.com/user-attachments/assets/7dd3ffb7-8f3a-43ee-84f0-d88a0bd4a990)
+
 
 
 4. Destroy Infrastructure
