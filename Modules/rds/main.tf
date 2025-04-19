@@ -3,7 +3,7 @@ resource "aws_db_subnet_group" "db-subnet"{
   subnet_ids = [var.private_subnet_5a_id, var.private_subnet_6b_id]
 }
 resource "aws_db_instance" "db"{
-    identifier             = "bookdb-instance"
+    identifier             = "towndb-instance"
     engine                 = "mysql"
     engine_version = null
     instance_class         = "db.t3.micro"
